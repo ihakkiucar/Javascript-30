@@ -1,0 +1,79 @@
+html {
+  font-size: 10px;
+  background: url("background.jpg") bottom right;
+  background-size: cover;
+}
+
+body,html {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.keys {
+  display: flex;
+  flex: 1;
+  flex-flow: wrap;
+  width: calc(15vw + 600px);
+  min-height: 100vh;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 8vw;
+}
+
+.key {
+  border: .3rem solid #00000075;
+  border-radius: .3rem;
+  margin: 1rem;
+  font-size: 1.5rem;
+  padding: 4rem 1rem;
+  transition: all .07s ease;
+  width: 10rem;
+  text-align: center;
+  color: #fff;
+  background-color: rgba(0,0,0,0.4);
+  text-shadow: 0 0 .5rem black;
+  cursor:pointer;
+  user-select: none;
+}	
+.key:nth-child(4) {
+    margin-left: 60px;
+}
+.key:nth-child(7) {
+    margin-left: 120px;
+}
+.playing {
+  transform: scale(1.1);
+  border-color: #c5c464;
+  box-shadow: 0 0 1rem #c5c464;
+}
+
+kbd {
+  display: block;
+  font-size: 4rem;
+}
+
+.sound {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  color: #c5c464;
+}
+
+@media only screen and (max-width:767px){
+	.keys {
+	    width: 100%;
+	    padding: 0vw;
+	}
+	
+	.key {
+	    padding: 2rem 0rem;
+	    width: 8rem;
+	}
+
+	.key:nth-child(4), .key:nth-child(7) {
+	    margin-left: 1rem;
+	}
+}
